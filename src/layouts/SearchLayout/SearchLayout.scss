@@ -1,0 +1,120 @@
+.search-layout {
+    background-color: #282c34;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+    
+    h1{
+        margin-bottom:40px;
+    }
+
+    button{
+        height: 46px;
+        width: 193px;
+        border-radius: 27px;
+        font-size: 16px;
+        padding: 0 26px;
+        margin: 40px 20px;
+        color: #4baf50;
+        text-transform: uppercase;
+    }
+
+    &__swing-wrapper{
+        position: relative;
+    }
+
+    &__videos{
+        display:flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin:0 auto;
+        display: block;
+
+        video{
+            max-width:33%;
+            width:calc(25% - 40px);
+            border:20px #fff solid;
+        }
+    }
+}
+
+.swing {
+    display: inline-block;
+    width: 215px;
+    padding: 10px 0 10px 15px;
+    font-family: "Open Sans", sans;
+    font-weight: 400;
+    color: #4caf50;
+    background: #efefef;
+    border: 0;
+    border-radius: 27px;
+    outline: 0;
+    text-indent: 60px; 
+    transition: all .3s ease-in-out;
+    font-size: 19px;
+    
+    &::-webkit-input-placeholder {
+      color: #efefef;
+      text-indent: 0;
+      font-weight: 300;
+    }
+  
+    + label {
+      display: inline-block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      padding: 10px 15px;
+      background: #4caf50;
+      border-radius: 27px;
+      transform-origin: 2px 2px;
+      transform: rotate(0);
+      animation: swing-back .4s 1 ease-in-out;
+    }
+  }
+  @keyframes swing {
+    0% {
+      transform: rotate(0);
+    }
+    20% {
+      transform: rotate(116deg);
+    }
+    40% {
+      transform: rotate(60deg);
+    }
+    60% {
+      transform: rotate(98deg);
+    }
+    80% {
+      transform: rotate(76deg);
+    }
+    100% {
+      transform: rotate(82deg);
+    }
+  }
+  @keyframes swing-back {
+    0% {
+      transform: rotate(82deg);
+    }
+    100% {
+      transform: rotate(0);
+    }
+  }
+  .swing:focus,
+  .swing:active {
+    color: #377D6A;
+    text-indent: 0;
+    background: #fff;
+    
+    &::-webkit-input-placeholder {
+      color: #aaa;
+    }
+    + label {
+      animation: swing 1.4s 1 ease-in-out;
+      transform: rotate(82deg);
+    }
+  }
