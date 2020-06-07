@@ -11,6 +11,7 @@ function SearchLayout() {
     
     async function fetchData(){
         setError(false);
+        setResults([]);
         try{
             const fetchedData = await fetch(`https://api.giphy.com/v1/gifs/search?api_key=${process.env.REACT_APP_GIPHY_API_KEY}&q=${apiSearchQuery}&limit=25&offset=0&rating=G&lang=en`);
             const jsonData = await fetchedData.json();
