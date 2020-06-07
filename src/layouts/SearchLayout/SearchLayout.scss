@@ -18,9 +18,11 @@
         border-radius: 27px;
         font-size: 16px;
         padding: 0 26px;
-        margin: 40px 20px;
-        color: #4baf50;
+        margin: 40px auto;
+        background-color: #4baf50;
+        color:#fff;
         text-transform: uppercase;
+        border:0;
     }
 
     &__swing-wrapper{
@@ -56,6 +58,10 @@
     text-indent: 60px; 
     transition: all .3s ease-in-out;
     font-size: 19px;
+    width:500px;
+    max-width: 90%;
+    margin:0 auto;
+    padding-left:60px;
     
     &::-webkit-input-placeholder {
       color: #efefef;
@@ -74,6 +80,10 @@
       transform-origin: 2px 2px;
       transform: rotate(0);
       animation: swing-back .4s 1 ease-in-out;
+      height:26px;
+      font-size: 20px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
     }
   }
   @keyframes swing {
