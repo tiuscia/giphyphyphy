@@ -7,6 +7,7 @@ function App() {
   return (
     <div className="App">
     <Helmet>
+      <title>Giphyphyphy - tiuscia</title>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet"/>
     </Helmet>
     <SearchLayout />
